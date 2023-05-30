@@ -1,0 +1,26 @@
+.logo
+{
+
+  height: 150px;
+  cursor: pointer;
+  
+}
+
+.subtitle 
+{
+
+  font-style: italic;
+  font-size: x-large;
+  color: rgb(3, 74, 113);
+
+}
+
+.themeFontColor 
+{
+  color: rgb(8, 146, 191);
+}
+
+tr 
+{
+  cursor: pointer;
+}
