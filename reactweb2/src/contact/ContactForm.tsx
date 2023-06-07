@@ -1,5 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Contact } from "../Types/contact"
+import toBase64 from "../toBase64";
+
 
 
 type Args = 
@@ -19,6 +21,16 @@ const ContactForm = ({contact, submitted} : Args) =>
             submitted(contactState);
 
         }
+
+    const onFileSelected = async(e: React.ChangeEvent<HTMLInputElement>)
+    :Promise<void> =>
+    {
+        e.preventDefault;
+        e.target.files && e.target.files[0] &&
+        setContactState({...contactState,
+        photo: await toBase64(e.target.files[0]) });
+
+    }
         
 
     return(
@@ -64,10 +76,23 @@ const ContactForm = ({contact, submitted} : Args) =>
                 onChange={(e) =>setContactState({ ...contactState, phoneNumber: parseInt(e.target.value) })}
             />
         </div>
-        
+        <div className = "form-group mt-2">
+            <label htmlFor= "image">Image</label>
+            <input
+            id = "image"
+            type ="file"
+            className="form-control"
+            onChange={onFileSelected}
+            />
+             
+        </div>
+            <div className="mt-2">
+                <img src={contactState.photo}></img>
+            </div>
+           
       
       
-            <button className="btn btn-primary mt-2" disabled={!contactState.email} onClick={onSubmit}>
+            <button className="btn btn-primary mt-2" disabled={!contactState.email || !contactState.phoneNumber} onClick={onSubmit}>
                 Submit
             </button>
         </form>
@@ -81,3 +106,5 @@ const ContactForm = ({contact, submitted} : Args) =>
 };
 
 export default ContactForm;
+
+

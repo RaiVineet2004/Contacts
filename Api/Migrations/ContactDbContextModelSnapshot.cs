@@ -30,6 +30,9 @@ namespace Api.Migrations
                     b.Property<int>("PhoneNumber")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Photo")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("firstName")
                         .HasColumnType("TEXT");
 

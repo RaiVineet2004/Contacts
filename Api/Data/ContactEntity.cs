@@ -6,6 +6,8 @@ public class ContactEntity
     public string? LastName {get;set;}
     public string? Email {get;set;}
     public int PhoneNumber {get;set;}
+    public string? Photo { get; set; }
+    
 
     
     

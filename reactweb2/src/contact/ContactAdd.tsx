@@ -14,6 +14,8 @@ const ContactAdd = () =>
         lastName: "",
         email:"",
         phoneNumber:0,
+        photo :""
+        
 
     };
 

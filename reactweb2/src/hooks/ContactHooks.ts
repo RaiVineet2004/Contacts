@@ -40,7 +40,7 @@ const useAddContact = () =>
 
 };
 
-// updating the house
+// updating the contact
 const useUpdateContact = () => 
 {
     const nav = useNavigate();
@@ -56,7 +56,7 @@ const useUpdateContact = () =>
     )
 
 };
-//  Deleting the House
+//  Deleting the Contact
 
 const useDeleteContact = () => 
 {

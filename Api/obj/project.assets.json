@@ -1719,11 +1719,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/vineetrai/Desktop/Stomble/Api/Api.csproj",
+      "projectUniqueName": "/Users/vineetrai/Desktop/Contacts-Api/Api/Api.csproj",
       "projectName": "Api",
-      "projectPath": "/Users/vineetrai/Desktop/Stomble/Api/Api.csproj",
+      "projectPath": "/Users/vineetrai/Desktop/Contacts-Api/Api/Api.csproj",
       "packagesPath": "/Users/vineetrai/.nuget/packages/",
-      "outputPath": "/Users/vineetrai/Desktop/Stomble/Api/obj/",
+      "outputPath": "/Users/vineetrai/Desktop/Contacts-Api/Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/vineetrai/.nuget/NuGet/NuGet.Config"

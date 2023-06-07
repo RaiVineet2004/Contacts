@@ -35,6 +35,8 @@ const ContactList = () =>
                     </tr>
                     <tr>
                         <th>Name</th>
+                       
+
                         <th>Number</th>
                    
                     </tr>
@@ -49,6 +51,7 @@ const ContactList = () =>
                         <tr key = {h.id} onClick =
                          {() => nav(`/contact/${h.id}`)}>
                             <td>{h.firstName}</td>
+                           
                             
                             <td>{h.phoneNumber}</td>
 

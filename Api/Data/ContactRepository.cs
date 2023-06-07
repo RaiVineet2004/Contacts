@@ -28,20 +28,21 @@ public class ContactRepository : IContactRepository
         e.LastName = dto.LastName;
         e.Email = dto.Email;
         e.PhoneNumber = dto.PhoneNumber;
+        e.Photo = dto.Photo;
         
 
     }
     private static ContactDetailDto EntityToDeltaDto(ContactEntity e)
     {
          return new ContactDetailDto
-            (e.Id,e.firstName,e.LastName,e.Email,e.PhoneNumber);
+            (e.Id,e.firstName,e.LastName,e.Email,e.PhoneNumber,e.Photo);
 
     }
 
     public async Task<List<ContactDtos>> GetAll()
     {
         return await context.Contacts.Select
-            (h => new ContactDtos(h.Id, h.firstName,h.LastName,h.Email,h.PhoneNumber)).ToListAsync();
+            (h => new ContactDtos(h.Id, h.firstName,h.LastName,h.Email,h.PhoneNumber,h.Photo)).ToListAsync();
 
     }
     //Get Method
