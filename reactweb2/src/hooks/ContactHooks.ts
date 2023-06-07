@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const UseFetchContacts = () => 
 {
+    
     return useQuery<Contact[], AxiosError>("contact",() =>
     axios.get(`${config.baseApiUrl}/contact`).then(
         (resp) => resp.data)

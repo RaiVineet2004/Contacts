@@ -21,17 +21,21 @@ const ContactDetails = () =>
     if (!data) return <div>contact didn't found</div>
 
     return (
-      <div className="row">
+      <div  className="row">
       <div className="col-6">
         <div className="row">
-          <img
+          <br></br>
+          <img  
             className="img-fluid"
             src={data.photo ? data.photo : defaultImage}
             alt="contact pic"
+            style={{ width: '250px', height: '250px' }}
             
            
           />
         </div>
+        <br></br>
+        <br></br>
         <div className="row mt-3">
           <div className="col-2">
             <Link
@@ -55,17 +59,18 @@ const ContactDetails = () =>
           </div>
         </div>
       </div>
-      <div className="col-6">
+      <div className="col-5">
         <div className="row mt-2">
-          <h3 className="col-12">{data.firstName}</h3>
+        <h3 className="col-12">{data.firstName}</h3>
+
         </div>
         <div className="row">
           <h3 className="col-12">{data.lastName}</h3>
         </div>
         <div className="row">
-          <h2 className="themeFontColor col-12">
+          <h3 className="themeFontColor col-12">
             {(data.email)}
-          </h2>
+          </h3>
         </div>
         <div className="row">
           <h3><div className="col-12 mt-3">{data.phoneNumber}</div></h3>

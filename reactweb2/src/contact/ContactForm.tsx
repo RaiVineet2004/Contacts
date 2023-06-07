@@ -87,7 +87,8 @@ const ContactForm = ({contact, submitted} : Args) =>
              
         </div>
             <div className="mt-2">
-                <img src={contactState.photo}></img>
+                <img style={{ width: '250px', height: '250px' }}
+                src={contactState.photo}></img>
             </div>
            
       
