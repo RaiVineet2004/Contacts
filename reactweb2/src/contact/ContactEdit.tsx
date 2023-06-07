@@ -16,9 +16,6 @@ const ContactEdit = () =>
     return(
         
             <ContactForm contact = {data} submitted = {h => updateHouseMutation.mutate(h)}/>
-        
-        
-
     );
     
 

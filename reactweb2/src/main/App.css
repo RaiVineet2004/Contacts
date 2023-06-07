@@ -1,8 +1,9 @@
 .logo
 {
-
+  
   height: 150px;
   cursor: pointer;
+  
   
 }
 
@@ -24,10 +25,13 @@ tr
 {
   cursor: pointer;
 }
-.fixed-image {
+
+.fixed-image 
+{
   width: 250px;
   height: 250px;
 }
+
 
 
 

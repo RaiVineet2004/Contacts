@@ -4,9 +4,6 @@ import ApiStatus from "../ApiStatus";
 import { useDeleteContact, UseFetchDetailContact } from "../hooks/ContactHooks";
 import defaultImage from "./defaultPhoto";
 
-
-
-
 const ContactDetails = () =>
 {
     const {id} = useParams();
@@ -24,12 +21,13 @@ const ContactDetails = () =>
       <div  className="row">
       <div className="col-6">
         <div className="row">
-          <br></br>
+          
           <img  
+          
             className="img-fluid"
             src={data.photo ? data.photo : defaultImage}
             alt="contact pic"
-            style={{ width: '250px', height: '250px' }}
+            style={{ width: '250px', height: '250px' , marginLeft: '250px', marginTop: '50px'}}
             
            
           />
@@ -37,7 +35,8 @@ const ContactDetails = () =>
         <br></br>
         <br></br>
         <div className="row mt-3">
-          <div className="col-2">
+          <div className="col-2"
+          style = {{marginLeft: '268px'}}>
             <Link
               className="btn btn-primary w-100"
               to={`/contact/edit/${data.id}`}
@@ -59,8 +58,8 @@ const ContactDetails = () =>
           </div>
         </div>
       </div>
-      <div className="col-5">
-        <div className="row mt-2">
+      <div className="col-4"  style={{marginTop: '50px'}}>
+        <div className="row mt-5" >
         <h3 className="col-12">{data.firstName}</h3>
 
         </div>
@@ -68,12 +67,12 @@ const ContactDetails = () =>
           <h3 className="col-12">{data.lastName}</h3>
         </div>
         <div className="row">
-          <h3 className="themeFontColor col-12">
+          <h3 className="col-12">
             {(data.email)}
           </h3>
         </div>
         <div className="row">
-          <h3><div className="col-12 mt-3">{data.phoneNumber}</div></h3>
+          <h3><div className="themeFontColor col-12 mt-3">{data.phoneNumber}</div></h3>
         </div>
         
       </div>
